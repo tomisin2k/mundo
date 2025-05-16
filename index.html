@@ -43,19 +43,36 @@
     }
     
     @media (max-width: 600px) {
+      /* Increased font sizes by ~20% for mobile */
       svg text {
-        font-size: 90%; /* Scale down text size on smaller screens */
+        font-size: 14px !important; /* Base size (was 12px) */
+      }
+      svg text.stage-content-small {
+        font-size: 13px !important; /* Small text (was 10.8px) */
+      }
+      svg text[font-size="18"] {
+        font-size: 22px !important; /* Headers (was 18px) */
+      }
+      svg text[font-size="14"] {
+        font-size: 17px !important; /* Subheaders (was 14px) */
+      }
+      svg text[font-size="32"] {
+        font-size: 28px !important; /* Title (scaled down for mobile) */
+      }
+      
+      /* Adjusted spacing */
+      .strategy-container {
+        margin-bottom: 20px;
       }
     }
     
     @media (max-width: 480px) {
-      svg text {
-        font-size: 80%; /* Further reduce text size for very small screens */
+      /* Further adjustments for very small screens */
+      svg text[font-size="18"] {
+        font-size: 20px !important;
       }
-      
-      /* Adjust positions for better visibility on mobile */
-      .stage-content-small {
-        font-size: 8px !important;
+      svg text.stage-content-small {
+        font-size: 12px !important;
       }
     }
   </style>
